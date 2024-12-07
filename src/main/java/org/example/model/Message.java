@@ -4,7 +4,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Message {
-    private String sender, recipient, text, dateTime;
+    private String  text, dateTime;
+    private User sender, recipient;
 
     public Message(){
         LocalDateTime currentDateTime = LocalDateTime.now();
@@ -13,17 +14,17 @@ public class Message {
         dateTime = formattedDateTime;
     }
 
-    
+
     //Getters
     public String getDateTime() {
         return dateTime;
     }
 
-    public String getRecipient() {
+    public User getRecipient() {
         return recipient;
     }
 
-    public String getSender() {
+    public User getSender() {
         return sender;
     }
 
@@ -36,11 +37,11 @@ public class Message {
         this.dateTime = dateTime;
     }
 
-    public void setRecipient(String recipient) {
+    public void setRecipient(User recipient) {
         this.recipient = recipient;
     }
 
-    public void setSender(String sender) {
+    public void setSender(User sender) {
         this.sender = sender;
     }
 
