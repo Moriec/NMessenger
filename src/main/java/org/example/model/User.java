@@ -6,9 +6,11 @@ public class User {
     private String phone;
     private String password;
 
-    User(){
+    User() {
+
     }
-    User(String username, String name, String phone, String password){
+
+    User(String username, String name, String phone, String password) {
         this.username = username;
         this.name = name;
         this.phone = phone;
