@@ -8,7 +8,7 @@ public class Message {
     private User sender, recipient;
     @Override
     public String toString(){
-        return text;
+        return "From " + sender.getNickname() + " to " + recipient.getNickname() + " :\n" + text + "\n" + dateTime;
     }
     public Message(){
     }
