@@ -8,12 +8,14 @@ public class Message {
     private User sender, recipient;
 
     public Message(){
-        LocalDateTime currentDateTime = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formattedDateTime = currentDateTime.format(formatter);
-        dateTime = formattedDateTime;
     }
 
+    public Message(User sender, User recipient, String text, String dateTime){
+        this.sender = sender;
+        this.recipient = recipient;
+        this.text = text;
+        this.dateTime = dateTime;
+    }
 
     //Getters
     public String getDateTime() {
