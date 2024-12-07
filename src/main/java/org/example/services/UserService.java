@@ -16,4 +16,14 @@ public class UserService {
         users[3] = new User("Олег", "Антон", "+76384667348", "87364");
     }
 
+    public User[] getUsers() {
+        return users;
+    }
+
+    public void printUserInfo(User user) {
+        System.out.print("Никнейм: " + user.getNickname() + ", Имя: " + user.getUsername());
+        System.out.print(", Телефон: " + user.getPhone() + ", Пароль: " + user.getPassword());
+        System.out.println();
+    }
+
 }
