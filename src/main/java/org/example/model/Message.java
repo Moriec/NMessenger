@@ -6,7 +6,10 @@ import java.time.format.DateTimeFormatter;
 public class Message {
     private String  text, dateTime;
     private User sender, recipient;
-
+    @Override
+    public String toString(){
+        return text;
+    }
     public Message(){
     }
 
