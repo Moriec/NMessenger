@@ -7,7 +7,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class MessageService {
-
+    private Message[] messages;
+    @Override
+    public String toString(){
+        return messages[0].getText() + " " + messages[1].getText() + " " + messages[2].getText() + " " + messages[3].getText();
+    }
     public String getDate(){
         //Текущее время
         LocalDateTime currentDateTime = LocalDateTime.now();
@@ -18,7 +22,7 @@ public class MessageService {
     }
 
     public Message[] create4Message(User[] users){
-        Message[] messages = new Message[4];
+        messages = new Message[4];
         messages[0] = send(users[0], users[1], "Hello");
         messages[1] = send(users[1], users[2], "Привет");
         messages[2] = send(users[2], users[3], "Бонжур");
